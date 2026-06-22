@@ -1,0 +1,1813 @@
+{
+  "responseCode": 200,
+  "message": "success",
+  "content": [
+      {
+          "id": "6518634503349194220",
+          "form_id": "260888335369068",
+          "ip": "171.251.234.33",
+          "created_at": "2026-04-13 00:24:11",
+          "status": "ACTIVE",
+          "new": "1",
+          "flag": "0",
+          "notes": "",
+          "updated_at": null,
+          "answers": {
+              "1": {
+                  "name": "q1_header",
+                  "order": "1",
+                  "text": "Frontend Developer Recruitment Form",
+                  "type": "control_head"
+              },
+              "2": {
+                  "name": "q2_fullname0",
+                  "order": "2",
+                  "sublabels": "{\"prefix\":\"Prefix\",\"first\":\"First Name\",\"middle\":\"Middle Name\",\"last\":\"Last Name\",\"suffix\":\"Suffix\"}",
+                  "text": "Full Name",
+                  "type": "control_fullname",
+                  "answer": {
+                      "first": "Hai",
+                      "last": "Duong 130405"
+                  },
+                  "prettyFormat": "Hai Duong 130405"
+              },
+              "3": {
+                  "name": "q3_email1",
+                  "order": "3",
+                  "text": "Email Address",
+                  "type": "control_email",
+                  "answer": "haiduong@test.com"
+              },
+              "4": {
+                  "countryCode": "No",
+                  "inputMask": "enable",
+                  "inputMaskValue": "(###) ###-####",
+                  "name": "q4_phone2",
+                  "order": "4",
+                  "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+                  "text": "Phone Number",
+                  "type": "control_phone",
+                  "answer": {
+                      "full": "(037) 584-9385"
+                  },
+                  "prettyFormat": "(037) 584-9385"
+              },
+              "5": {
+                  "name": "q5_textbox3",
+                  "order": "5",
+                  "text": "LinkedIn Profile URL",
+                  "type": "control_textbox",
+                  "answer": "linkdein.com/test"
+              },
+              "6": {
+                  "name": "q6_textbox4",
+                  "order": "6",
+                  "text": "GitHub or Portfolio URL",
+                  "type": "control_textbox",
+                  "answer": "github.com/test"
+              },
+              "7": {
+                  "name": "q7_checkbox5",
+                  "order": "7",
+                  "text": "Which frontend technologies are you proficient in?",
+                  "type": "control_checkbox",
+                  "answer": {
+                      "0": "HTML/CSS",
+                      "1": "JavaScript",
+                      "2": "React",
+                      "3": "Angular",
+                      "4": "TypeScript",
+                      "other": "NextJS"
+                  },
+                  "prettyFormat": "HTML/CSS; JavaScript; React; Angular; TypeScript; NextJS"
+              },
+              "8": {
+                  "maxValue": "50",
+                  "name": "q8_number6",
+                  "order": "8",
+                  "text": "How many years of professional experience do you have in frontend development?",
+                  "type": "control_number",
+                  "answer": "7"
+              },
+              "9": {
+                  "name": "q9_textarea7",
+                  "order": "9",
+                  "text": "Briefly describe your most recent frontend project.",
+                  "type": "control_textarea",
+                  "answer": "Briefly describe your most recent frontend project."
+              },
+              "10": {
+                  "name": "q10_fileupload8",
+                  "order": "10",
+                  "text": "Upload your resume (PDF, DOC, or DOCX)",
+                  "type": "control_fileupload",
+                  "answer": [
+                      "https://www.jotform.com/uploads/ngochaiitech/260888335369068/6518634503349194220/Sofia Ramirez.txt"
+                  ],
+                  "prettyFormat": "<a href=\"https://www.jotform.com/uploads/ngochaiitech/260888335369068/6518634503349194220/Sofia%20Ramirez.txt\" target=\"_blank\" title=\"Sofia Ramirez.txt\">Sofia Ramirez.txt</a>"
+              },
+              "11": {
+                  "name": "q11_textarea9",
+                  "order": "11",
+                  "text": "Why are you interested in this role?",
+                  "type": "control_textarea",
+                  "answer": "Why are you interested in this role?"
+              },
+              "12": {
+                  "hackRecipients": "No",
+                  "name": "q12_submit",
+                  "order": "15",
+                  "text": "Submit Application",
+                  "type": "control_button"
+              },
+              "13": {
+                  "name": "availableStart",
+                  "order": "12",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date",
+                  "timeFormat": "AM/PM",
+                  "type": "control_datetime",
+                  "answer": {
+                      "month": "04",
+                      "day": "28",
+                      "year": "2026",
+                      "datetime": "2026-04-28 00:00:00"
+                  },
+                  "prettyFormat": "04-28-2026"
+              },
+              "14": {
+                  "name": "availableStart14",
+                  "order": "13",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date time",
+                  "timeFormat": "24 Hour",
+                  "type": "control_datetime",
+                  "answer": {
+                      "month": "04",
+                      "day": "28",
+                      "year": "2026",
+                      "timeInput": "09:00",
+                      "hour": "09",
+                      "min": "00",
+                      "datetime": "2026-04-28 09:00:00"
+                  },
+                  "prettyFormat": "04-28-2026 09:00"
+              },
+              "17": {
+                  "name": "selectEmployment",
+                  "order": "14",
+                  "text": "Select employment type",
+                  "type": "control_dropdown",
+                  "answer": "Full time"
+              }
+          }
+      },
+      {
+          "id": "6518625423348952599",
+          "form_id": "260888335369068",
+          "ip": "171.251.234.33",
+          "created_at": "2026-04-13 00:09:03",
+          "status": "ACTIVE",
+          "new": "1",
+          "flag": "0",
+          "notes": "",
+          "updated_at": null,
+          "answers": {
+              "1": {
+                  "name": "q1_header",
+                  "order": "1",
+                  "text": "Frontend Developer Recruitment Form",
+                  "type": "control_head"
+              },
+              "2": {
+                  "name": "q2_fullname0",
+                  "order": "2",
+                  "sublabels": "{\"prefix\":\"Prefix\",\"first\":\"First Name\",\"middle\":\"Middle Name\",\"last\":\"Last Name\",\"suffix\":\"Suffix\"}",
+                  "text": "Full Name",
+                  "type": "control_fullname",
+                  "answer": {
+                      "first": "Hai",
+                      "last": "Duong 130404"
+                  },
+                  "prettyFormat": "Hai Duong 130404"
+              },
+              "3": {
+                  "name": "q3_email1",
+                  "order": "3",
+                  "text": "Email Address",
+                  "type": "control_email",
+                  "answer": "haiduong@test.com"
+              },
+              "4": {
+                  "countryCode": "No",
+                  "inputMask": "enable",
+                  "inputMaskValue": "(###) ###-####",
+                  "name": "q4_phone2",
+                  "order": "4",
+                  "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+                  "text": "Phone Number",
+                  "type": "control_phone",
+                  "answer": {
+                      "full": "(037) 584-9385"
+                  },
+                  "prettyFormat": "(037) 584-9385"
+              },
+              "5": {
+                  "name": "q5_textbox3",
+                  "order": "5",
+                  "text": "LinkedIn Profile URL",
+                  "type": "control_textbox",
+                  "answer": "linkdein.com/test"
+              },
+              "6": {
+                  "name": "q6_textbox4",
+                  "order": "6",
+                  "text": "GitHub or Portfolio URL",
+                  "type": "control_textbox",
+                  "answer": "github.com/test"
+              },
+              "7": {
+                  "name": "q7_checkbox5",
+                  "order": "7",
+                  "text": "Which frontend technologies are you proficient in?",
+                  "type": "control_checkbox",
+                  "answer": {
+                      "0": "HTML/CSS",
+                      "1": "JavaScript",
+                      "2": "React",
+                      "3": "Angular",
+                      "4": "TypeScript",
+                      "other": "NextJS"
+                  },
+                  "prettyFormat": "HTML/CSS; JavaScript; React; Angular; TypeScript; NextJS"
+              },
+              "8": {
+                  "maxValue": "50",
+                  "name": "q8_number6",
+                  "order": "8",
+                  "text": "How many years of professional experience do you have in frontend development?",
+                  "type": "control_number",
+                  "answer": "5"
+              },
+              "9": {
+                  "name": "q9_textarea7",
+                  "order": "9",
+                  "text": "Briefly describe your most recent frontend project.",
+                  "type": "control_textarea",
+                  "answer": "Briefly describe your most recent frontend project."
+              },
+              "10": {
+                  "name": "q10_fileupload8",
+                  "order": "10",
+                  "text": "Upload your resume (PDF, DOC, or DOCX)",
+                  "type": "control_fileupload",
+                  "answer": [
+                      "https://www.jotform.com/uploads/ngochaiitech/260888335369068/6518625423348952599/Sofia Ramirez.txt"
+                  ],
+                  "prettyFormat": "<a href=\"https://www.jotform.com/uploads/ngochaiitech/260888335369068/6518625423348952599/Sofia%20Ramirez.txt\" target=\"_blank\" title=\"Sofia Ramirez.txt\">Sofia Ramirez.txt</a>"
+              },
+              "11": {
+                  "name": "q11_textarea9",
+                  "order": "11",
+                  "text": "Why are you interested in this role?",
+                  "type": "control_textarea",
+                  "answer": "Why are you interested in this role?"
+              },
+              "12": {
+                  "hackRecipients": "No",
+                  "name": "q12_submit",
+                  "order": "15",
+                  "text": "Submit Application",
+                  "type": "control_button"
+              },
+              "13": {
+                  "name": "availableStart",
+                  "order": "12",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date",
+                  "timeFormat": "AM/PM",
+                  "type": "control_datetime",
+                  "answer": {
+                      "month": "04",
+                      "day": "30",
+                      "year": "2026",
+                      "datetime": "2026-04-30 00:00:00"
+                  },
+                  "prettyFormat": "04-30-2026"
+              },
+              "14": {
+                  "name": "availableStart14",
+                  "order": "13",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date time",
+                  "timeFormat": "24 Hour",
+                  "type": "control_datetime",
+                  "answer": {
+                      "month": "04",
+                      "day": "30",
+                      "year": "2026",
+                      "timeInput": "08:00",
+                      "hour": "08",
+                      "min": "00",
+                      "datetime": "2026-04-30 08:00:00"
+                  },
+                  "prettyFormat": "04-30-2026 08:00"
+              },
+              "17": {
+                  "name": "selectEmployment",
+                  "order": "14",
+                  "text": "Select employment type",
+                  "type": "control_dropdown",
+                  "answer": "Part time"
+              }
+          }
+      },
+      {
+          "id": "6518624873348702605",
+          "form_id": "260888335369068",
+          "ip": "171.251.234.33",
+          "created_at": "2026-04-13 00:08:07",
+          "status": "ACTIVE",
+          "new": "1",
+          "flag": "0",
+          "notes": "",
+          "updated_at": null,
+          "answers": {
+              "1": {
+                  "name": "q1_header",
+                  "order": "1",
+                  "text": "Frontend Developer Recruitment Form",
+                  "type": "control_head"
+              },
+              "2": {
+                  "name": "q2_fullname0",
+                  "order": "2",
+                  "sublabels": "{\"prefix\":\"Prefix\",\"first\":\"First Name\",\"middle\":\"Middle Name\",\"last\":\"Last Name\",\"suffix\":\"Suffix\"}",
+                  "text": "Full Name",
+                  "type": "control_fullname",
+                  "answer": {
+                      "first": "Hai",
+                      "last": "Duong 130403"
+                  },
+                  "prettyFormat": "Hai Duong 130403"
+              },
+              "3": {
+                  "name": "q3_email1",
+                  "order": "3",
+                  "text": "Email Address",
+                  "type": "control_email",
+                  "answer": "haiduong@test.com"
+              },
+              "4": {
+                  "countryCode": "No",
+                  "inputMask": "enable",
+                  "inputMaskValue": "(###) ###-####",
+                  "name": "q4_phone2",
+                  "order": "4",
+                  "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+                  "text": "Phone Number",
+                  "type": "control_phone",
+                  "answer": {
+                      "full": "(037) 584-9385"
+                  },
+                  "prettyFormat": "(037) 584-9385"
+              },
+              "5": {
+                  "name": "q5_textbox3",
+                  "order": "5",
+                  "text": "LinkedIn Profile URL",
+                  "type": "control_textbox",
+                  "answer": "linkdein.com/test"
+              },
+              "6": {
+                  "name": "q6_textbox4",
+                  "order": "6",
+                  "text": "GitHub or Portfolio URL",
+                  "type": "control_textbox",
+                  "answer": "github.com/test"
+              },
+              "7": {
+                  "name": "q7_checkbox5",
+                  "order": "7",
+                  "text": "Which frontend technologies are you proficient in?",
+                  "type": "control_checkbox",
+                  "answer": {
+                      "0": "HTML/CSS",
+                      "1": "JavaScript",
+                      "2": "React",
+                      "3": "Angular",
+                      "4": "TypeScript",
+                      "other": "NextJS"
+                  },
+                  "prettyFormat": "HTML/CSS; JavaScript; React; Angular; TypeScript; NextJS"
+              },
+              "8": {
+                  "maxValue": "50",
+                  "name": "q8_number6",
+                  "order": "8",
+                  "text": "How many years of professional experience do you have in frontend development?",
+                  "type": "control_number",
+                  "answer": "5"
+              },
+              "9": {
+                  "name": "q9_textarea7",
+                  "order": "9",
+                  "text": "Briefly describe your most recent frontend project.",
+                  "type": "control_textarea",
+                  "answer": "Briefly describe your most recent frontend project."
+              },
+              "10": {
+                  "name": "q10_fileupload8",
+                  "order": "10",
+                  "text": "Upload your resume (PDF, DOC, or DOCX)",
+                  "type": "control_fileupload",
+                  "answer": [
+                      "https://www.jotform.com/uploads/ngochaiitech/260888335369068/6518624873348702605/Daniel Chen.txt"
+                  ],
+                  "prettyFormat": "<a href=\"https://www.jotform.com/uploads/ngochaiitech/260888335369068/6518624873348702605/Daniel%20Chen.txt\" target=\"_blank\" title=\"Daniel Chen.txt\">Daniel Chen.txt</a>"
+              },
+              "11": {
+                  "name": "q11_textarea9",
+                  "order": "11",
+                  "text": "Why are you interested in this role?",
+                  "type": "control_textarea",
+                  "answer": "Why are you interested in this role?"
+              },
+              "12": {
+                  "hackRecipients": "No",
+                  "name": "q12_submit",
+                  "order": "15",
+                  "text": "Submit Application",
+                  "type": "control_button"
+              },
+              "13": {
+                  "name": "availableStart",
+                  "order": "12",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date",
+                  "timeFormat": "AM/PM",
+                  "type": "control_datetime",
+                  "answer": {
+                      "month": "04",
+                      "day": "30",
+                      "year": "2026",
+                      "datetime": "2026-04-30 00:00:00"
+                  },
+                  "prettyFormat": "04-30-2026"
+              },
+              "14": {
+                  "name": "availableStart14",
+                  "order": "13",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date time",
+                  "timeFormat": "24 Hour",
+                  "type": "control_datetime",
+                  "answer": {
+                      "month": "04",
+                      "day": "30",
+                      "year": "2026",
+                      "timeInput": "09:00",
+                      "hour": "09",
+                      "min": "00",
+                      "datetime": "2026-04-30 09:00:00"
+                  },
+                  "prettyFormat": "04-30-2026 09:00"
+              },
+              "17": {
+                  "name": "selectEmployment",
+                  "order": "14",
+                  "text": "Select employment type",
+                  "type": "control_dropdown",
+                  "answer": "Full time"
+              }
+          }
+      },
+      {
+          "id": "6518608043343934592",
+          "form_id": "260888335369068",
+          "ip": "171.251.234.33",
+          "created_at": "2026-04-12 23:40:05",
+          "status": "ACTIVE",
+          "new": "1",
+          "flag": "0",
+          "notes": "",
+          "updated_at": null,
+          "answers": {
+              "1": {
+                  "name": "q1_header",
+                  "order": "1",
+                  "text": "Frontend Developer Recruitment Form",
+                  "type": "control_head"
+              },
+              "2": {
+                  "name": "q2_fullname0",
+                  "order": "2",
+                  "sublabels": "{\"prefix\":\"Prefix\",\"first\":\"First Name\",\"middle\":\"Middle Name\",\"last\":\"Last Name\",\"suffix\":\"Suffix\"}",
+                  "text": "Full Name",
+                  "type": "control_fullname",
+                  "answer": {
+                      "first": "Hai",
+                      "last": "Duong 130402"
+                  },
+                  "prettyFormat": "Hai Duong 130402"
+              },
+              "3": {
+                  "name": "q3_email1",
+                  "order": "3",
+                  "text": "Email Address",
+                  "type": "control_email",
+                  "answer": "haiduong@test.com"
+              },
+              "4": {
+                  "countryCode": "No",
+                  "inputMask": "enable",
+                  "inputMaskValue": "(###) ###-####",
+                  "name": "q4_phone2",
+                  "order": "4",
+                  "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+                  "text": "Phone Number",
+                  "type": "control_phone",
+                  "answer": {
+                      "full": "(037) 593-3847"
+                  },
+                  "prettyFormat": "(037) 593-3847"
+              },
+              "5": {
+                  "name": "q5_textbox3",
+                  "order": "5",
+                  "text": "LinkedIn Profile URL",
+                  "type": "control_textbox",
+                  "answer": "linkedin.com/test"
+              },
+              "6": {
+                  "name": "q6_textbox4",
+                  "order": "6",
+                  "text": "GitHub or Portfolio URL",
+                  "type": "control_textbox",
+                  "answer": "github.com/test"
+              },
+              "7": {
+                  "name": "q7_checkbox5",
+                  "order": "7",
+                  "text": "Which frontend technologies are you proficient in?",
+                  "type": "control_checkbox",
+                  "answer": [
+                      "HTML/CSS",
+                      "JavaScript",
+                      "React",
+                      "Vue.js",
+                      "Angular",
+                      "TypeScript"
+                  ],
+                  "prettyFormat": "HTML/CSS; JavaScript; React; Vue.js; Angular; TypeScript"
+              },
+              "8": {
+                  "maxValue": "50",
+                  "name": "q8_number6",
+                  "order": "8",
+                  "text": "How many years of professional experience do you have in frontend development?",
+                  "type": "control_number",
+                  "answer": "6"
+              },
+              "9": {
+                  "name": "q9_textarea7",
+                  "order": "9",
+                  "text": "Briefly describe your most recent frontend project.",
+                  "type": "control_textarea",
+                  "answer": "Briefly describe your most recent frontend project."
+              },
+              "10": {
+                  "name": "q10_fileupload8",
+                  "order": "10",
+                  "text": "Upload your resume (PDF, DOC, or DOCX)",
+                  "type": "control_fileupload",
+                  "answer": [
+                      "https://www.jotform.com/uploads/ngochaiitech/260888335369068/6518608043343934592/Bradley Mehta.docx"
+                  ],
+                  "prettyFormat": "<a href=\"https://www.jotform.com/uploads/ngochaiitech/260888335369068/6518608043343934592/Bradley%20Mehta.docx\" target=\"_blank\" title=\"Bradley Mehta.docx\">Bradley Mehta.docx</a>"
+              },
+              "11": {
+                  "name": "q11_textarea9",
+                  "order": "11",
+                  "text": "Why are you interested in this role?",
+                  "type": "control_textarea",
+                  "answer": "Why are you interested in this role?"
+              },
+              "12": {
+                  "hackRecipients": "No",
+                  "name": "q12_submit",
+                  "order": "15",
+                  "text": "Submit Application",
+                  "type": "control_button"
+              },
+              "13": {
+                  "name": "availableStart",
+                  "order": "12",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date",
+                  "timeFormat": "AM/PM",
+                  "type": "control_datetime",
+                  "answer": {
+                      "month": "04",
+                      "day": "28",
+                      "year": "2026",
+                      "datetime": "2026-04-28 00:00:00"
+                  },
+                  "prettyFormat": "04-28-2026"
+              },
+              "14": {
+                  "name": "availableStart14",
+                  "order": "13",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date time",
+                  "timeFormat": "24 Hour",
+                  "type": "control_datetime",
+                  "answer": {
+                      "month": "04",
+                      "day": "28",
+                      "year": "2026",
+                      "timeInput": "08:00",
+                      "hour": "08",
+                      "min": "00",
+                      "datetime": "2026-04-28 08:00:00"
+                  },
+                  "prettyFormat": "04-28-2026 08:00"
+              },
+              "17": {
+                  "name": "selectEmployment",
+                  "order": "14",
+                  "text": "Select employment type",
+                  "type": "control_dropdown"
+              }
+          }
+      },
+      {
+          "id": "6518571313349339719",
+          "form_id": "260888335369068",
+          "ip": "171.251.234.33",
+          "created_at": "2026-04-12 22:38:51",
+          "status": "ACTIVE",
+          "new": "1",
+          "flag": "0",
+          "notes": "",
+          "updated_at": null,
+          "answers": {
+              "1": {
+                  "name": "q1_header",
+                  "order": "1",
+                  "text": "Frontend Developer Recruitment Form",
+                  "type": "control_head"
+              },
+              "2": {
+                  "name": "q2_fullname0",
+                  "order": "2",
+                  "sublabels": "{\"prefix\":\"Prefix\",\"first\":\"First Name\",\"middle\":\"Middle Name\",\"last\":\"Last Name\",\"suffix\":\"Suffix\"}",
+                  "text": "Full Name",
+                  "type": "control_fullname",
+                  "answer": {
+                      "first": "Hai",
+                      "last": "Duong 130401"
+                  },
+                  "prettyFormat": "Hai Duong 130401"
+              },
+              "3": {
+                  "name": "q3_email1",
+                  "order": "3",
+                  "text": "Email Address",
+                  "type": "control_email",
+                  "answer": "haiduong@test.com"
+              },
+              "4": {
+                  "countryCode": "No",
+                  "inputMask": "enable",
+                  "inputMaskValue": "(###) ###-####",
+                  "name": "q4_phone2",
+                  "order": "4",
+                  "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+                  "text": "Phone Number",
+                  "type": "control_phone",
+                  "answer": {
+                      "full": "(037) 593-3847"
+                  },
+                  "prettyFormat": "(037) 593-3847"
+              },
+              "5": {
+                  "name": "q5_textbox3",
+                  "order": "5",
+                  "text": "LinkedIn Profile URL",
+                  "type": "control_textbox",
+                  "answer": "linkedin.com/test"
+              },
+              "6": {
+                  "name": "q6_textbox4",
+                  "order": "6",
+                  "text": "GitHub or Portfolio URL",
+                  "type": "control_textbox",
+                  "answer": "github.com/test"
+              },
+              "7": {
+                  "name": "q7_checkbox5",
+                  "order": "7",
+                  "text": "Which frontend technologies are you proficient in?",
+                  "type": "control_checkbox",
+                  "answer": [
+                      "HTML/CSS",
+                      "JavaScript",
+                      "React",
+                      "Vue.js",
+                      "Angular",
+                      "TypeScript"
+                  ],
+                  "prettyFormat": "HTML/CSS; JavaScript; React; Vue.js; Angular; TypeScript"
+              },
+              "8": {
+                  "maxValue": "50",
+                  "name": "q8_number6",
+                  "order": "8",
+                  "text": "How many years of professional experience do you have in frontend development?",
+                  "type": "control_number",
+                  "answer": "6"
+              },
+              "9": {
+                  "name": "q9_textarea7",
+                  "order": "9",
+                  "text": "Briefly describe your most recent frontend project.",
+                  "type": "control_textarea",
+                  "answer": "Briefly describe your most recent frontend project."
+              },
+              "10": {
+                  "name": "q10_fileupload8",
+                  "order": "10",
+                  "text": "Upload your resume (PDF, DOC, or DOCX)",
+                  "type": "control_fileupload",
+                  "answer": [
+                      "https://www.jotform.com/uploads/ngochaiitech/260888335369068/6518571313349339719/Ahmed Hassan.txt"
+                  ],
+                  "prettyFormat": "<a href=\"https://www.jotform.com/uploads/ngochaiitech/260888335369068/6518571313349339719/Ahmed%20Hassan.txt\" target=\"_blank\" title=\"Ahmed Hassan.txt\">Ahmed Hassan.txt</a>"
+              },
+              "11": {
+                  "name": "q11_textarea9",
+                  "order": "11",
+                  "text": "Why are you interested in this role?",
+                  "type": "control_textarea",
+                  "answer": "Why are you interested in this role?"
+              },
+              "12": {
+                  "hackRecipients": "No",
+                  "name": "q12_submit",
+                  "order": "15",
+                  "text": "Submit Application",
+                  "type": "control_button"
+              },
+              "13": {
+                  "name": "availableStart",
+                  "order": "12",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date",
+                  "timeFormat": "AM/PM",
+                  "type": "control_datetime",
+                  "answer": {
+                      "month": "04",
+                      "day": "22",
+                      "year": "2026",
+                      "datetime": "2026-04-22 00:00:00"
+                  },
+                  "prettyFormat": "04-22-2026"
+              },
+              "14": {
+                  "name": "availableStart14",
+                  "order": "13",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date time",
+                  "timeFormat": "24 Hour",
+                  "type": "control_datetime",
+                  "answer": {
+                      "month": "04",
+                      "day": "22",
+                      "year": "2026",
+                      "timeInput": "07:00",
+                      "hour": "07",
+                      "min": "00",
+                      "datetime": "2026-04-22 07:00:00"
+                  },
+                  "prettyFormat": "04-22-2026 07:00"
+              },
+              "17": {
+                  "name": "selectEmployment",
+                  "order": "14",
+                  "text": "Select employment type",
+                  "type": "control_dropdown"
+              }
+          }
+      },
+      {
+          "id": "6516003783346601453",
+          "form_id": "260888335369068",
+          "ip": "171.251.234.33",
+          "created_at": "2026-04-09 23:19:38",
+          "status": "ACTIVE",
+          "new": "1",
+          "flag": "0",
+          "notes": "",
+          "updated_at": null,
+          "answers": {
+              "1": {
+                  "name": "q1_header",
+                  "order": "1",
+                  "text": "Frontend Developer Recruitment Form",
+                  "type": "control_head"
+              },
+              "2": {
+                  "name": "q2_fullname0",
+                  "order": "2",
+                  "sublabels": "{\"prefix\":\"Prefix\",\"first\":\"First Name\",\"middle\":\"Middle Name\",\"last\":\"Last Name\",\"suffix\":\"Suffix\"}",
+                  "text": "Full Name",
+                  "type": "control_fullname",
+                  "answer": {
+                      "first": "Justin",
+                      "last": "Bieber"
+                  },
+                  "prettyFormat": "Justin Bieber"
+              },
+              "3": {
+                  "name": "q3_email1",
+                  "order": "3",
+                  "text": "Email Address",
+                  "type": "control_email",
+                  "answer": "JB@email.com"
+              },
+              "4": {
+                  "countryCode": "No",
+                  "inputMask": "enable",
+                  "inputMaskValue": "(###) ###-####",
+                  "name": "q4_phone2",
+                  "order": "4",
+                  "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+                  "text": "Phone Number",
+                  "type": "control_phone",
+                  "answer": {
+                      "full": "(037) 582-9374"
+                  },
+                  "prettyFormat": "(037) 582-9374"
+              },
+              "5": {
+                  "name": "q5_textbox3",
+                  "order": "5",
+                  "text": "LinkedIn Profile URL",
+                  "type": "control_textbox",
+                  "answer": "linkedin.com/JB"
+              },
+              "6": {
+                  "name": "q6_textbox4",
+                  "order": "6",
+                  "text": "GitHub or Portfolio URL",
+                  "type": "control_textbox",
+                  "answer": "github.com/JB"
+              },
+              "7": {
+                  "name": "q7_checkbox5",
+                  "order": "7",
+                  "text": "Which frontend technologies are you proficient in?",
+                  "type": "control_checkbox",
+                  "answer": {
+                      "0": "HTML/CSS",
+                      "1": "JavaScript",
+                      "2": "React",
+                      "3": "Vue.js",
+                      "4": "Angular",
+                      "5": "TypeScript",
+                      "other": "Python"
+                  },
+                  "prettyFormat": "HTML/CSS; JavaScript; React; Vue.js; Angular; TypeScript; Python"
+              },
+              "8": {
+                  "maxValue": "50",
+                  "name": "q8_number6",
+                  "order": "8",
+                  "text": "How many years of professional experience do you have in frontend development?",
+                  "type": "control_number",
+                  "answer": "5"
+              },
+              "9": {
+                  "name": "q9_textarea7",
+                  "order": "9",
+                  "text": "Briefly describe your most recent frontend project.",
+                  "type": "control_textarea",
+                  "answer": "Briefly describe your most recent frontend project."
+              },
+              "10": {
+                  "name": "q10_fileupload8",
+                  "order": "10",
+                  "text": "Upload your resume (PDF, DOC, or DOCX)",
+                  "type": "control_fileupload",
+                  "answer": [
+                      "https://www.jotform.com/uploads/ngochaiitech/260888335369068/6516003783346601453/Bradley Mehta.docx"
+                  ],
+                  "prettyFormat": "<a href=\"https://www.jotform.com/uploads/ngochaiitech/260888335369068/6516003783346601453/Bradley%20Mehta.docx\" target=\"_blank\" title=\"Bradley Mehta.docx\">Bradley Mehta.docx</a>"
+              },
+              "11": {
+                  "name": "q11_textarea9",
+                  "order": "11",
+                  "text": "Why are you interested in this role?",
+                  "type": "control_textarea",
+                  "answer": "Why are you interested in this role?"
+              },
+              "12": {
+                  "hackRecipients": "No",
+                  "name": "q12_submit",
+                  "order": "15",
+                  "text": "Submit Application",
+                  "type": "control_button"
+              },
+              "13": {
+                  "name": "availableStart",
+                  "order": "12",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date",
+                  "timeFormat": "AM/PM",
+                  "type": "control_datetime"
+              },
+              "14": {
+                  "name": "availableStart14",
+                  "order": "13",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date time",
+                  "timeFormat": "24 Hour",
+                  "type": "control_datetime"
+              },
+              "17": {
+                  "name": "selectEmployment",
+                  "order": "14",
+                  "text": "Select employment type",
+                  "type": "control_dropdown"
+              }
+          }
+      },
+      {
+          "id": "6515958973341633513",
+          "form_id": "260888335369068",
+          "ip": "171.251.234.33",
+          "created_at": "2026-04-09 22:04:58",
+          "status": "ACTIVE",
+          "new": "1",
+          "flag": "0",
+          "notes": "",
+          "updated_at": null,
+          "answers": {
+              "1": {
+                  "name": "q1_header",
+                  "order": "1",
+                  "text": "Frontend Developer Recruitment Form",
+                  "type": "control_head"
+              },
+              "2": {
+                  "name": "q2_fullname0",
+                  "order": "2",
+                  "sublabels": "{\"prefix\":\"Prefix\",\"first\":\"First Name\",\"middle\":\"Middle Name\",\"last\":\"Last Name\",\"suffix\":\"Suffix\"}",
+                  "text": "Full Name",
+                  "type": "control_fullname",
+                  "answer": {
+                      "first": "Adam",
+                      "last": "Lambert"
+                  },
+                  "prettyFormat": "Adam Lambert"
+              },
+              "3": {
+                  "name": "q3_email1",
+                  "order": "3",
+                  "text": "Email Address",
+                  "type": "control_email",
+                  "answer": "lambert@email.com"
+              },
+              "4": {
+                  "countryCode": "No",
+                  "inputMask": "enable",
+                  "inputMaskValue": "(###) ###-####",
+                  "name": "q4_phone2",
+                  "order": "4",
+                  "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+                  "text": "Phone Number",
+                  "type": "control_phone",
+                  "answer": {
+                      "full": "(034) 589-7843"
+                  },
+                  "prettyFormat": "(034) 589-7843"
+              },
+              "5": {
+                  "name": "q5_textbox3",
+                  "order": "5",
+                  "text": "LinkedIn Profile URL",
+                  "type": "control_textbox",
+                  "answer": "linkedin.com/lambert"
+              },
+              "6": {
+                  "name": "q6_textbox4",
+                  "order": "6",
+                  "text": "GitHub or Portfolio URL",
+                  "type": "control_textbox",
+                  "answer": "github.com/lambert"
+              },
+              "7": {
+                  "name": "q7_checkbox5",
+                  "order": "7",
+                  "text": "Which frontend technologies are you proficient in?",
+                  "type": "control_checkbox",
+                  "answer": {
+                      "0": "HTML/CSS",
+                      "1": "JavaScript",
+                      "2": "React",
+                      "3": "Vue.js",
+                      "4": "Angular",
+                      "5": "TypeScript",
+                      "other": "Java"
+                  },
+                  "prettyFormat": "HTML/CSS; JavaScript; React; Vue.js; Angular; TypeScript; Java"
+              },
+              "8": {
+                  "maxValue": "50",
+                  "name": "q8_number6",
+                  "order": "8",
+                  "text": "How many years of professional experience do you have in frontend development?",
+                  "type": "control_number",
+                  "answer": "3"
+              },
+              "9": {
+                  "name": "q9_textarea7",
+                  "order": "9",
+                  "text": "Briefly describe your most recent frontend project.",
+                  "type": "control_textarea",
+                  "answer": "Briefly describe your most recent frontend project."
+              },
+              "10": {
+                  "name": "q10_fileupload8",
+                  "order": "10",
+                  "text": "Upload your resume (PDF, DOC, or DOCX)",
+                  "type": "control_fileupload",
+                  "answer": [
+                      "https://www.jotform.com/uploads/ngochaiitech/260888335369068/6515958973341633513/Priya Shah.txt"
+                  ],
+                  "prettyFormat": "<a href=\"https://www.jotform.com/uploads/ngochaiitech/260888335369068/6515958973341633513/Priya%20Shah.txt\" target=\"_blank\" title=\"Priya Shah.txt\">Priya Shah.txt</a>"
+              },
+              "11": {
+                  "name": "q11_textarea9",
+                  "order": "11",
+                  "text": "Why are you interested in this role?",
+                  "type": "control_textarea",
+                  "answer": "Why are you interested in this role?"
+              },
+              "12": {
+                  "hackRecipients": "No",
+                  "name": "q12_submit",
+                  "order": "15",
+                  "text": "Submit Application",
+                  "type": "control_button"
+              },
+              "13": {
+                  "name": "availableStart",
+                  "order": "12",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date",
+                  "timeFormat": "AM/PM",
+                  "type": "control_datetime"
+              },
+              "14": {
+                  "name": "availableStart14",
+                  "order": "13",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date time",
+                  "timeFormat": "24 Hour",
+                  "type": "control_datetime"
+              },
+              "17": {
+                  "name": "selectEmployment",
+                  "order": "14",
+                  "text": "Select employment type",
+                  "type": "control_dropdown"
+              }
+          }
+      },
+      {
+          "id": "6515129353347546437",
+          "form_id": "260888335369068",
+          "ip": "171.251.234.33",
+          "created_at": "2026-04-08 23:02:15",
+          "status": "ACTIVE",
+          "new": "1",
+          "flag": "0",
+          "notes": "",
+          "updated_at": null,
+          "answers": {
+              "1": {
+                  "name": "q1_header",
+                  "order": "1",
+                  "text": "Frontend Developer Recruitment Form",
+                  "type": "control_head"
+              },
+              "2": {
+                  "name": "q2_fullname0",
+                  "order": "2",
+                  "sublabels": "{\"prefix\":\"Prefix\",\"first\":\"First Name\",\"middle\":\"Middle Name\",\"last\":\"Last Name\",\"suffix\":\"Suffix\"}",
+                  "text": "Full Name",
+                  "type": "control_fullname",
+                  "answer": {
+                      "first": "John",
+                      "last": "Smith"
+                  },
+                  "prettyFormat": "John Smith"
+              },
+              "3": {
+                  "name": "q3_email1",
+                  "order": "3",
+                  "text": "Email Address",
+                  "type": "control_email",
+                  "answer": "john@test.com"
+              },
+              "4": {
+                  "countryCode": "No",
+                  "inputMask": "enable",
+                  "inputMaskValue": "(###) ###-####",
+                  "name": "q4_phone2",
+                  "order": "4",
+                  "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+                  "text": "Phone Number",
+                  "type": "control_phone",
+                  "answer": {
+                      "full": "(037) 589-4372"
+                  },
+                  "prettyFormat": "(037) 589-4372"
+              },
+              "5": {
+                  "name": "q5_textbox3",
+                  "order": "5",
+                  "text": "LinkedIn Profile URL",
+                  "type": "control_textbox",
+                  "answer": "linkedin.com/test"
+              },
+              "6": {
+                  "name": "q6_textbox4",
+                  "order": "6",
+                  "text": "GitHub or Portfolio URL",
+                  "type": "control_textbox",
+                  "answer": "github.com/test"
+              },
+              "7": {
+                  "name": "q7_checkbox5",
+                  "order": "7",
+                  "text": "Which frontend technologies are you proficient in?",
+                  "type": "control_checkbox",
+                  "answer": [
+                      "HTML/CSS",
+                      "JavaScript",
+                      "React",
+                      "Vue.js",
+                      "Angular",
+                      "TypeScript"
+                  ],
+                  "prettyFormat": "HTML/CSS; JavaScript; React; Vue.js; Angular; TypeScript"
+              },
+              "8": {
+                  "maxValue": "50",
+                  "name": "q8_number6",
+                  "order": "8",
+                  "text": "How many years of professional experience do you have in frontend development?",
+                  "type": "control_number",
+                  "answer": "5"
+              },
+              "9": {
+                  "name": "q9_textarea7",
+                  "order": "9",
+                  "text": "Briefly describe your most recent frontend project.",
+                  "type": "control_textarea",
+                  "answer": "Briefly describe your most recent frontend project."
+              },
+              "10": {
+                  "name": "q10_fileupload8",
+                  "order": "10",
+                  "text": "Upload your resume (PDF, DOC, or DOCX)",
+                  "type": "control_fileupload",
+                  "answer": [
+                      "https://www.jotform.com/uploads/ngochaiitech/260888335369068/6515129353347546437/Bradley Cooper.docx"
+                  ],
+                  "prettyFormat": "<a href=\"https://www.jotform.com/uploads/ngochaiitech/260888335369068/6515129353347546437/Bradley%20Cooper.docx\" target=\"_blank\" title=\"Bradley Cooper.docx\">Bradley Cooper.docx</a>"
+              },
+              "11": {
+                  "name": "q11_textarea9",
+                  "order": "11",
+                  "text": "Why are you interested in this role?",
+                  "type": "control_textarea",
+                  "answer": "Why are you interested in this role?"
+              },
+              "12": {
+                  "hackRecipients": "No",
+                  "name": "q12_submit",
+                  "order": "15",
+                  "text": "Submit Application",
+                  "type": "control_button"
+              },
+              "13": {
+                  "name": "availableStart",
+                  "order": "12",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date",
+                  "timeFormat": "AM/PM",
+                  "type": "control_datetime"
+              },
+              "14": {
+                  "name": "availableStart14",
+                  "order": "13",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date time",
+                  "timeFormat": "24 Hour",
+                  "type": "control_datetime"
+              },
+              "17": {
+                  "name": "selectEmployment",
+                  "order": "14",
+                  "text": "Select employment type",
+                  "type": "control_dropdown"
+              }
+          }
+      },
+      {
+          "id": "6513375163343983023",
+          "form_id": "260888335369068",
+          "ip": "171.251.234.33",
+          "created_at": "2026-04-06 22:18:38",
+          "status": "ACTIVE",
+          "new": "1",
+          "flag": "0",
+          "notes": "",
+          "updated_at": null,
+          "answers": {
+              "1": {
+                  "name": "q1_header",
+                  "order": "1",
+                  "text": "Frontend Developer Recruitment Form",
+                  "type": "control_head"
+              },
+              "2": {
+                  "name": "q2_fullname0",
+                  "order": "2",
+                  "sublabels": "{\"prefix\":\"Prefix\",\"first\":\"First Name\",\"middle\":\"Middle Name\",\"last\":\"Last Name\",\"suffix\":\"Suffix\"}",
+                  "text": "Full Name",
+                  "type": "control_fullname",
+                  "answer": {
+                      "first": "Hai",
+                      "last": "Duong"
+                  },
+                  "prettyFormat": "Hai Duong"
+              },
+              "3": {
+                  "name": "q3_email1",
+                  "order": "3",
+                  "text": "Email Address",
+                  "type": "control_email",
+                  "answer": "ngochaiitech@gmail.com"
+              },
+              "4": {
+                  "countryCode": "No",
+                  "inputMask": "enable",
+                  "inputMaskValue": "(###) ###-####",
+                  "name": "q4_phone2",
+                  "order": "4",
+                  "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+                  "text": "Phone Number",
+                  "type": "control_phone",
+                  "answer": {
+                      "full": "(037) 591-1341"
+                  },
+                  "prettyFormat": "(037) 591-1341"
+              },
+              "5": {
+                  "name": "q5_textbox3",
+                  "order": "5",
+                  "text": "LinkedIn Profile URL",
+                  "type": "control_textbox",
+                  "answer": "https://www.linkedin.com/test"
+              },
+              "6": {
+                  "name": "q6_textbox4",
+                  "order": "6",
+                  "text": "GitHub or Portfolio URL",
+                  "type": "control_textbox",
+                  "answer": "https://www.github.com/test"
+              },
+              "7": {
+                  "name": "q7_checkbox5",
+                  "order": "7",
+                  "text": "Which frontend technologies are you proficient in?",
+                  "type": "control_checkbox",
+                  "answer": {
+                      "0": "HTML/CSS",
+                      "1": "JavaScript",
+                      "2": "React",
+                      "3": "Vue.js",
+                      "4": "Angular",
+                      "5": "TypeScript",
+                      "other": "ExpressJS"
+                  },
+                  "prettyFormat": "HTML/CSS; JavaScript; React; Vue.js; Angular; TypeScript; ExpressJS"
+              },
+              "8": {
+                  "maxValue": "50",
+                  "name": "q8_number6",
+                  "order": "8",
+                  "text": "How many years of professional experience do you have in frontend development?",
+                  "type": "control_number",
+                  "answer": "6"
+              },
+              "9": {
+                  "name": "q9_textarea7",
+                  "order": "9",
+                  "text": "Briefly describe your most recent frontend project.",
+                  "type": "control_textarea",
+                  "answer": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\""
+              },
+              "10": {
+                  "name": "q10_fileupload8",
+                  "order": "10",
+                  "text": "Upload your resume (PDF, DOC, or DOCX)",
+                  "type": "control_fileupload",
+                  "answer": [
+                      "https://www.jotform.com/uploads/ngochaiitech/260888335369068/6513375163343983023/Jane Doe Resume.pdf"
+                  ],
+                  "prettyFormat": "<a href=\"https://www.jotform.com/uploads/ngochaiitech/260888335369068/6513375163343983023/Jane%20Doe%20Resume.pdf\" target=\"_blank\" title=\"Jane Doe Resume.pdf\">Jane Doe Resume.pdf</a>"
+              },
+              "11": {
+                  "name": "q11_textarea9",
+                  "order": "11",
+                  "text": "Why are you interested in this role?",
+                  "type": "control_textarea",
+                  "answer": "\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,"
+              },
+              "12": {
+                  "hackRecipients": "No",
+                  "name": "q12_submit",
+                  "order": "15",
+                  "text": "Submit Application",
+                  "type": "control_button"
+              },
+              "13": {
+                  "name": "availableStart",
+                  "order": "12",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date",
+                  "timeFormat": "AM/PM",
+                  "type": "control_datetime"
+              },
+              "14": {
+                  "name": "availableStart14",
+                  "order": "13",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date time",
+                  "timeFormat": "24 Hour",
+                  "type": "control_datetime"
+              },
+              "17": {
+                  "name": "selectEmployment",
+                  "order": "14",
+                  "text": "Select employment type",
+                  "type": "control_dropdown"
+              }
+          }
+      },
+      {
+          "id": "6509237571328880993",
+          "form_id": "260888335369068",
+          "ip": "116.111.184.231",
+          "created_at": "2026-04-02 03:22:39",
+          "status": "ACTIVE",
+          "new": "1",
+          "flag": "0",
+          "notes": "",
+          "updated_at": null,
+          "answers": {
+              "1": {
+                  "name": "q1_header",
+                  "order": "1",
+                  "text": "Frontend Developer Recruitment Form",
+                  "type": "control_head"
+              },
+              "2": {
+                  "name": "q2_fullname0",
+                  "order": "2",
+                  "sublabels": "{\"prefix\":\"Prefix\",\"first\":\"First Name\",\"middle\":\"Middle Name\",\"last\":\"Last Name\",\"suffix\":\"Suffix\"}",
+                  "text": "Full Name",
+                  "type": "control_fullname",
+                  "answer": {
+                      "first": "qweqweqwe",
+                      "last": "qweqwe"
+                  },
+                  "prettyFormat": "qweqweqwe qweqwe"
+              },
+              "3": {
+                  "name": "q3_email1",
+                  "order": "3",
+                  "text": "Email Address",
+                  "type": "control_email",
+                  "answer": "qwewqe@qweqwe.com"
+              },
+              "4": {
+                  "countryCode": "No",
+                  "inputMask": "enable",
+                  "inputMaskValue": "(###) ###-####",
+                  "name": "q4_phone2",
+                  "order": "4",
+                  "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+                  "text": "Phone Number",
+                  "type": "control_phone",
+                  "answer": {
+                      "full": "(037) 591-1342"
+                  },
+                  "prettyFormat": "(037) 591-1342"
+              },
+              "5": {
+                  "name": "q5_textbox3",
+                  "order": "5",
+                  "text": "LinkedIn Profile URL",
+                  "type": "control_textbox",
+                  "answer": "asdasd12321.com"
+              },
+              "6": {
+                  "name": "q6_textbox4",
+                  "order": "6",
+                  "text": "GitHub or Portfolio URL",
+                  "type": "control_textbox",
+                  "answer": "asdsad123asd.com"
+              },
+              "7": {
+                  "name": "q7_checkbox5",
+                  "order": "7",
+                  "text": "Which frontend technologies are you proficient in?",
+                  "type": "control_checkbox",
+                  "answer": {
+                      "0": "HTML/CSS",
+                      "1": "JavaScript",
+                      "2": "React",
+                      "3": "Vue.js",
+                      "4": "Angular",
+                      "5": "TypeScript",
+                      "other": "NextJS"
+                  },
+                  "prettyFormat": "HTML/CSS; JavaScript; React; Vue.js; Angular; TypeScript; NextJS"
+              },
+              "8": {
+                  "maxValue": "50",
+                  "name": "q8_number6",
+                  "order": "8",
+                  "text": "How many years of professional experience do you have in frontend development?",
+                  "type": "control_number",
+                  "answer": "6"
+              },
+              "9": {
+                  "name": "q9_textarea7",
+                  "order": "9",
+                  "text": "Briefly describe your most recent frontend project.",
+                  "type": "control_textarea",
+                  "answer": "Briefly describe your most recent frontend project."
+              },
+              "10": {
+                  "name": "q10_fileupload8",
+                  "order": "10",
+                  "text": "Upload your resume (PDF, DOC, or DOCX)",
+                  "type": "control_fileupload",
+                  "answer": [
+                      "https://www.jotform.com/uploads/ngochaiitech/260888335369068/6509237571328880993/Sofia Ramirez.txt"
+                  ],
+                  "prettyFormat": "<a href=\"https://www.jotform.com/uploads/ngochaiitech/260888335369068/6509237571328880993/Sofia%20Ramirez.txt\" target=\"_blank\" title=\"Sofia Ramirez.txt\">Sofia Ramirez.txt</a>"
+              },
+              "11": {
+                  "name": "q11_textarea9",
+                  "order": "11",
+                  "text": "Why are you interested in this role?",
+                  "type": "control_textarea",
+                  "answer": "Why are you interested in this role?"
+              },
+              "12": {
+                  "hackRecipients": "No",
+                  "name": "q12_submit",
+                  "order": "15",
+                  "text": "Submit Application",
+                  "type": "control_button"
+              },
+              "13": {
+                  "name": "availableStart",
+                  "order": "12",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date",
+                  "timeFormat": "AM/PM",
+                  "type": "control_datetime"
+              },
+              "14": {
+                  "name": "availableStart14",
+                  "order": "13",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date time",
+                  "timeFormat": "24 Hour",
+                  "type": "control_datetime"
+              },
+              "17": {
+                  "name": "selectEmployment",
+                  "order": "14",
+                  "text": "Select employment type",
+                  "type": "control_dropdown"
+              }
+          }
+      },
+      {
+          "id": "6509105408361154162",
+          "form_id": "260888335369068",
+          "ip": "113.162.176.38",
+          "created_at": "2026-04-01 23:42:22",
+          "status": "ACTIVE",
+          "new": "1",
+          "flag": "0",
+          "notes": "",
+          "updated_at": null,
+          "answers": {
+              "1": {
+                  "name": "q1_header",
+                  "order": "1",
+                  "text": "Frontend Developer Recruitment Form",
+                  "type": "control_head"
+              },
+              "2": {
+                  "name": "q2_fullname0",
+                  "order": "2",
+                  "sublabels": "{\"prefix\":\"Prefix\",\"first\":\"First Name\",\"middle\":\"Middle Name\",\"last\":\"Last Name\",\"suffix\":\"Suffix\"}",
+                  "text": "Full Name",
+                  "type": "control_fullname",
+                  "answer": {
+                      "first": "dasdad",
+                      "last": "asdasd"
+                  },
+                  "prettyFormat": "dasdad asdasd"
+              },
+              "3": {
+                  "name": "q3_email1",
+                  "order": "3",
+                  "text": "Email Address",
+                  "type": "control_email",
+                  "answer": "adasd@asdasd.com"
+              },
+              "4": {
+                  "countryCode": "No",
+                  "inputMask": "enable",
+                  "inputMaskValue": "(###) ###-####",
+                  "name": "q4_phone2",
+                  "order": "4",
+                  "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+                  "text": "Phone Number",
+                  "type": "control_phone",
+                  "answer": {
+                      "full": "(037) 591-1342"
+                  },
+                  "prettyFormat": "(037) 591-1342"
+              },
+              "5": {
+                  "name": "q5_textbox3",
+                  "order": "5",
+                  "text": "LinkedIn Profile URL",
+                  "type": "control_textbox",
+                  "answer": "asdasd.com"
+              },
+              "6": {
+                  "name": "q6_textbox4",
+                  "order": "6",
+                  "text": "GitHub or Portfolio URL",
+                  "type": "control_textbox",
+                  "answer": "asdasdads.com"
+              },
+              "7": {
+                  "name": "q7_checkbox5",
+                  "order": "7",
+                  "text": "Which frontend technologies are you proficient in?",
+                  "type": "control_checkbox",
+                  "answer": {
+                      "0": "HTML/CSS",
+                      "1": "JavaScript",
+                      "2": "React",
+                      "3": "Vue.js",
+                      "4": "Angular",
+                      "5": "TypeScript",
+                      "other": "NextJS"
+                  },
+                  "prettyFormat": "HTML/CSS; JavaScript; React; Vue.js; Angular; TypeScript; NextJS"
+              },
+              "8": {
+                  "maxValue": "50",
+                  "name": "q8_number6",
+                  "order": "8",
+                  "text": "How many years of professional experience do you have in frontend development?",
+                  "type": "control_number",
+                  "answer": "6"
+              },
+              "9": {
+                  "name": "q9_textarea7",
+                  "order": "9",
+                  "text": "Briefly describe your most recent frontend project.",
+                  "type": "control_textarea",
+                  "answer": "asdasd8a7sd8as7d"
+              },
+              "10": {
+                  "name": "q10_fileupload8",
+                  "order": "10",
+                  "text": "Upload your resume (PDF, DOC, or DOCX)",
+                  "type": "control_fileupload",
+                  "answer": [
+                      "https://www.jotform.com/uploads/ngochaiitech/260888335369068/6509105408361154162/Arjun Mehta.txt"
+                  ],
+                  "prettyFormat": "<a href=\"https://www.jotform.com/uploads/ngochaiitech/260888335369068/6509105408361154162/Arjun%20Mehta.txt\" target=\"_blank\" title=\"Arjun Mehta.txt\">Arjun Mehta.txt</a>"
+              },
+              "11": {
+                  "name": "q11_textarea9",
+                  "order": "11",
+                  "text": "Why are you interested in this role?",
+                  "type": "control_textarea",
+                  "answer": "asdasd123kjaksdasd"
+              },
+              "12": {
+                  "hackRecipients": "No",
+                  "name": "q12_submit",
+                  "order": "15",
+                  "text": "Submit Application",
+                  "type": "control_button"
+              },
+              "13": {
+                  "name": "availableStart",
+                  "order": "12",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date",
+                  "timeFormat": "AM/PM",
+                  "type": "control_datetime"
+              },
+              "14": {
+                  "name": "availableStart14",
+                  "order": "13",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date time",
+                  "timeFormat": "24 Hour",
+                  "type": "control_datetime"
+              },
+              "17": {
+                  "name": "selectEmployment",
+                  "order": "14",
+                  "text": "Select employment type",
+                  "type": "control_dropdown"
+              }
+          }
+      },
+      {
+          "id": "6509071808369348149",
+          "form_id": "260888335369068",
+          "ip": "113.162.176.38",
+          "created_at": "2026-04-01 22:46:22",
+          "status": "ACTIVE",
+          "new": "1",
+          "flag": "0",
+          "notes": "",
+          "updated_at": null,
+          "answers": {
+              "1": {
+                  "name": "q1_header",
+                  "order": "1",
+                  "text": "Frontend Developer Recruitment Form",
+                  "type": "control_head"
+              },
+              "2": {
+                  "name": "q2_fullname0",
+                  "order": "2",
+                  "sublabels": "{\"prefix\":\"Prefix\",\"first\":\"First Name\",\"middle\":\"Middle Name\",\"last\":\"Last Name\",\"suffix\":\"Suffix\"}",
+                  "text": "Full Name",
+                  "type": "control_fullname",
+                  "answer": {
+                      "first": "Hai",
+                      "last": "Duong"
+                  },
+                  "prettyFormat": "Hai Duong"
+              },
+              "3": {
+                  "name": "q3_email1",
+                  "order": "3",
+                  "text": "Email Address",
+                  "type": "control_email",
+                  "answer": "ngochaiitech@gmail.com"
+              },
+              "4": {
+                  "countryCode": "No",
+                  "inputMask": "enable",
+                  "inputMaskValue": "(###) ###-####",
+                  "name": "q4_phone2",
+                  "order": "4",
+                  "sublabels": "{\"country\":\"Country Code\",\"area\":\"Area Code\",\"phone\":\"Phone Number\",\"full\":\"Phone Number\",\"masked\":\"Please enter a valid phone number.\"}",
+                  "text": "Phone Number",
+                  "type": "control_phone",
+                  "answer": {
+                      "full": "(037) 591-1341"
+                  },
+                  "prettyFormat": "(037) 591-1341"
+              },
+              "5": {
+                  "name": "q5_textbox3",
+                  "order": "5",
+                  "text": "LinkedIn Profile URL",
+                  "type": "control_textbox",
+                  "answer": "test.linkedin.com"
+              },
+              "6": {
+                  "name": "q6_textbox4",
+                  "order": "6",
+                  "text": "GitHub or Portfolio URL",
+                  "type": "control_textbox",
+                  "answer": "test.github.com"
+              },
+              "7": {
+                  "name": "q7_checkbox5",
+                  "order": "7",
+                  "text": "Which frontend technologies are you proficient in?",
+                  "type": "control_checkbox",
+                  "answer": {
+                      "0": "HTML/CSS",
+                      "1": "JavaScript",
+                      "2": "React",
+                      "3": "Vue.js",
+                      "4": "Angular",
+                      "5": "TypeScript",
+                      "other": "NextJS"
+                  },
+                  "prettyFormat": "HTML/CSS; JavaScript; React; Vue.js; Angular; TypeScript; NextJS"
+              },
+              "8": {
+                  "maxValue": "50",
+                  "name": "q8_number6",
+                  "order": "8",
+                  "text": "How many years of professional experience do you have in frontend development?",
+                  "type": "control_number",
+                  "answer": "6"
+              },
+              "9": {
+                  "name": "q9_textarea7",
+                  "order": "9",
+                  "text": "Briefly describe your most recent frontend project.",
+                  "type": "control_textarea",
+                  "answer": "Test briefly describe your most recent frontend project."
+              },
+              "10": {
+                  "name": "q10_fileupload8",
+                  "order": "10",
+                  "text": "Upload your resume (PDF, DOC, or DOCX)",
+                  "type": "control_fileupload",
+                  "answer": [
+                      "https://www.jotform.com/uploads/ngochaiitech/260888335369068/6509071808369348149/Ahmed Hassan.txt"
+                  ],
+                  "prettyFormat": "<a href=\"https://www.jotform.com/uploads/ngochaiitech/260888335369068/6509071808369348149/Ahmed%20Hassan.txt\" target=\"_blank\" title=\"Ahmed Hassan.txt\">Ahmed Hassan.txt</a>"
+              },
+              "11": {
+                  "name": "q11_textarea9",
+                  "order": "11",
+                  "text": "Why are you interested in this role?",
+                  "type": "control_textarea",
+                  "answer": "test why are you interested in this role?"
+              },
+              "12": {
+                  "hackRecipients": "No",
+                  "name": "q12_submit",
+                  "order": "15",
+                  "text": "Submit Application",
+                  "type": "control_button"
+              },
+              "13": {
+                  "name": "availableStart",
+                  "order": "12",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date",
+                  "timeFormat": "AM/PM",
+                  "type": "control_datetime"
+              },
+              "14": {
+                  "name": "availableStart14",
+                  "order": "13",
+                  "sublabels": "{\"day\":\"Day\",\"month\":\"Month\",\"year\":\"Year\",\"last\":\"Last Name\",\"hour\":\"Hour\",\"minutes\":\"Minutes\",\"litemode\":\"Date\"}",
+                  "text": "Available start date time",
+                  "timeFormat": "24 Hour",
+                  "type": "control_datetime"
+              },
+              "17": {
+                  "name": "selectEmployment",
+                  "order": "14",
+                  "text": "Select employment type",
+                  "type": "control_dropdown"
+              }
+          }
+      }
+  ],
+  "duration": "271.84ms",
+  "info": null,
+  "resultSet": {
+      "offset": 0,
+      "limit": 20,
+      "orderby": "id",
+      "count": 12
+  },
+  "limit-left": 999
+}

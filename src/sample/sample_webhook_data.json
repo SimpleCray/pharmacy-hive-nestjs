@@ -1,0 +1,44 @@
+{
+  "slug": "submit/260888335369068",
+  "jsExecutionTracker": "build-date-1775013250072=>init-started:1775114244944=>validator-called:1775114244950=>validator-mounted-false:1775114244951=>init-complete:1775114244955=>interval-complete:1775114265959=>onsubmit-fired:1775114557012=>observerSubmitHandler_received-submit-event:1775114557012=>submit-validation-passed:1775114557018=>observerSubmitHandler_validation-passed-submitting-form:1775114557021",
+  "submitSource": "form",
+  "submitDate": "1775114557021",
+  "buildDate": "1775013250072",
+  "uploadServerUrl": "https://upload.jotform.com/upload",
+  "eventObserver": "1",
+  "q2_q2_fullname0": {
+      "first": "qweqweqwe",
+      "last": "qweqwe"
+  },
+  "q3_q3_email1": "qwewqe@qweqwe.com",
+  "q4_q4_phone2": {
+      "full": "(037) 591-1342"
+  },
+  "q5_q5_textbox3": "asdasd12321.com",
+  "q6_q6_textbox4": "asdsad123asd.com",
+  "q7_q7_checkbox5": {
+      "0": "HTML/CSS",
+      "1": "JavaScript",
+      "2": "React",
+      "3": "Vue.js",
+      "4": "Angular",
+      "5": "TypeScript",
+      "other": "NextJS"
+  },
+  "q8_q8_number6": "6",
+  "q9_q9_textarea7": "Briefly describe your most recent frontend project.",
+  "q11_q11_textarea9": "Why are you interested in this role?",
+  "event_id": "1775114244944_260888335369068_BIWAWkt",
+  "timeToSubmit": "20",
+  "temp_upload": {
+      "q10_q10_fileupload8": [
+          "Sofia Ramirez.txt#jotformfs-e4f4ece4d0a90#019d4d0e-e54c-74f9-a1bf-ca24612b7ff3"
+      ]
+  },
+  "file_server": "jotformfs-e4f4ece4d0a90#019d4d0e-e54c-74f9-a1bf-ca24612b7ff3",
+  "validatedNewRequiredFieldIDs": "{\"new\":1,\"id_2\":\"qw\",\"id_3\":\"qw\",\"id_7\":\"Ne\",\"id_8\":\"6\",\"id_10\":\"up\"}",
+  "path": "/submit/260888335369068",
+  "q10_fileupload8": [
+      "https://www.jotform.com/uploads/ngochaiitech/260888335369068/6509237571328880993/Sofia%20Ramirez.txt"
+  ]
+}
