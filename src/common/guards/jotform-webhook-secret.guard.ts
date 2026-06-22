@@ -3,6 +3,7 @@ import { CanActivate, ExecutionContext, ForbiddenException, Injectable } from '@
 import { ConfigService } from '@nestjs/config';
 import { Request } from 'express';
 import createLogger from '../logger/logger';
+import { EnvKey } from '../../config/env.validation';
 
 const logger = createLogger();
 
@@ -36,7 +37,7 @@ export class JotformWebhookSecretGuard implements CanActivate {
 
   canActivate(context: ExecutionContext): boolean {
     const req = context.switchToHttp().getRequest<Request>();
-    const appSecret = this.configService.get<string>('APP_SECRET', '');
+    const appSecret = this.configService.get<string>(EnvKey.APP_SECRET, '');
 
     const provided = querySecret(req);
     if (!timingSafeEqualStrings(provided, appSecret)) {

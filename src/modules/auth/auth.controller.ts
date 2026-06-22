@@ -6,6 +6,7 @@ import axios from 'axios';
 import randomstring from 'randomstring';
 import createLogger from '../../common/logger/logger';
 import { UserService } from '../users/users.service';
+import { EnvKey } from '../../config/env.validation';
 
 const logger = createLogger();
 
@@ -19,9 +20,9 @@ export class AuthController {
   @Get()
   async authoriseMonday(@Query('token') token: string, @Res() res: Response): Promise<void> {
     logger.info('auth-controller.authoriseMonday - Attempt to authorise user');
-    const signingSecret = this.configService.get<string>('MONDAY_SIGNING_SECRET', '');
-    const clientId = this.configService.get<string>('MONDAY_CLIENT_ID', '');
-    const redirectUrl = this.configService.get<string>('MONDAY_REDIRECT_URL', '');
+    const signingSecret = this.configService.get<string>(EnvKey.MONDAY_SIGNING_SECRET, '');
+    const clientId = this.configService.get<string>(EnvKey.MONDAY_CLIENT_ID, '');
+    const redirectUrl = this.configService.get<string>(EnvKey.MONDAY_REDIRECT_URL, '');
 
     try {
       jwt.verify(token, signingSecret);
@@ -94,9 +95,9 @@ export class AuthController {
     try {
       const response = await axios.post('https://auth.monday.com/oauth2/token', {
         code,
-        client_id: this.configService.get<string>('MONDAY_CLIENT_ID', ''),
-        client_secret: this.configService.get<string>('MONDAY_CLIENT_SECRET', ''),
-        redirect_uri: this.configService.get<string>('MONDAY_REDIRECT_URL', ''),
+        client_id: this.configService.get<string>(EnvKey.MONDAY_CLIENT_ID, ''),
+        client_secret: this.configService.get<string>(EnvKey.MONDAY_CLIENT_SECRET, ''),
+        redirect_uri: this.configService.get<string>(EnvKey.MONDAY_REDIRECT_URL, ''),
       });
 
       const accessToken = response.data.access_token;

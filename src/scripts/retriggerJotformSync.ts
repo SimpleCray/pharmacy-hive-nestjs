@@ -11,6 +11,7 @@ import { SubscriptionService } from '../modules/subscriptions/subscriptions.serv
 import { SubscriptionEnum } from '../common/interfaces/subscription.interface';
 import { MondaySubscriptionPayload } from '../common/interfaces/webhook.interface';
 import { transformAnswer } from '../common/utils/commonFunctions';
+import { EnvKey } from '../config/env.validation';
 
 const SUBMISSION_FETCH_LIMIT = 1000;
 const DATE_FORMAT = 'YYYY-MM-DD';
@@ -87,7 +88,7 @@ async function main(): Promise<void> {
   const jotFormService = appContext.get(JotFormService);
   const subscriptionService = appContext.get(SubscriptionService);
   const config = appContext.get(ConfigService);
-  const signingSecret = config.get<string>('MONDAY_SIGNING_SECRET', '');
+  const signingSecret = config.get<string>(EnvKey.MONDAY_SIGNING_SECRET, '');
 
   const subscriptions = await subscriptionService.getSubscriptions({
     webhook_type: SubscriptionEnum.FORM_SUBMISSION,

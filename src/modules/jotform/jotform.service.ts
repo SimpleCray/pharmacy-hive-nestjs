@@ -11,6 +11,7 @@ import {
 } from '../../common/interfaces/form.interface';
 import createLogger from '../../common/logger/logger';
 import { extractErrorInfo } from '../../common/logger/logger.utils';
+import { EnvKey } from '../../config/env.validation';
 
 const logger = createLogger();
 
@@ -32,8 +33,8 @@ export class JotFormService {
   private readonly baseUrl: string;
 
   constructor(private readonly configService: ConfigService) {
-    this.apiKey = this.configService.get<string>('JOTFORM_API_KEY', '');
-    this.baseUrl = this.configService.get<string>('JOTFORM_BASE_URL', '');
+    this.apiKey = this.configService.get<string>(EnvKey.JOTFORM_API_KEY, '');
+    this.baseUrl = this.configService.get<string>(EnvKey.JOTFORM_BASE_URL, '');
   }
 
   private request = async <T>({

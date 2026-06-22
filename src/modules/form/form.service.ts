@@ -12,6 +12,7 @@ import { QUEUE_JOB_TYPES } from '../../common/constants/queue.constant';
 import { MondayService } from '../monday/monday.service';
 import { convertMondayColumnsValue, JOTFORM_UPLOADS_URL_PREFIX } from '../../common/utils/commonFunctions';
 import { fetchJotformUploadFileBuffer } from '../../common/utils/jotformFileDownload';
+import { EnvKey } from '../../config/env.validation';
 
 const logger = createLogger();
 
@@ -77,7 +78,7 @@ export class FormService {
         },
       };
 
-      const signingSecret = this.configService.get<string>('MONDAY_SIGNING_SECRET', '');
+      const signingSecret = this.configService.get<string>(EnvKey.MONDAY_SIGNING_SECRET, '');
       for (const subscription of subscriptions) {
         try {
           await axios.post(subscription.webhook_url, payload, {
@@ -160,7 +161,7 @@ export class FormService {
         }
 
         const columns = columnsResponse.data.boards[0].columns;
-        const jotformApiKey = this.configService.get<string>('JOTFORM_API_KEY', '');
+        const jotformApiKey = this.configService.get<string>(EnvKey.JOTFORM_API_KEY, '');
         const clearedFileColumns = new Set<string>();
 
         for (const [mappingColumnId, rawValue] of Object.entries(itemMapping)) {

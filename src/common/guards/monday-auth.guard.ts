@@ -6,6 +6,7 @@ import createLogger from '../logger/logger';
 import { extractErrorInfo } from '../logger/logger.utils';
 import { UserService } from '../../modules/users/users.service';
 import { MondaySession } from '../interfaces/common.interface';
+import { EnvKey } from '../../config/env.validation';
 
 const logger = createLogger();
 
@@ -33,7 +34,7 @@ export class MondayAuthGuard implements CanActivate {
         throw new UnauthorizedException({ error: 'Not authenticated' });
       }
 
-      const signingSecret = this.configService.get<string>('MONDAY_SIGNING_SECRET', '');
+      const signingSecret = this.configService.get<string>(EnvKey.MONDAY_SIGNING_SECRET, '');
       const { accountId, userId } = jwt.verify(authorization, signingSecret) as MondaySession;
 
       const user = await this.userService.findUserByAccountId(accountId);

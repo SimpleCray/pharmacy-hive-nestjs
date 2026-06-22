@@ -4,7 +4,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { BullModule } from '@nestjs/bullmq';
 import { ScheduleModule } from '@nestjs/schedule';
 
-import { envValidationSchema } from './config/env.validation';
+import { envValidationSchema, EnvKey } from './config/env.validation';
 import databaseConfig from './config/database.config';
 import { AppController } from './app.controller';
 
@@ -32,7 +32,7 @@ import { TasksModule } from './modules/tasks/tasks.module';
     SequelizeModule.forRootAsync({
       inject: [ConfigService],
       useFactory: (config: ConfigService) => {
-        const nodeEnv = config.get<string>('NODE_ENV', 'development');
+        const nodeEnv = config.get<string>(EnvKey.NODE_ENV, 'development');
         const dbConfig = databaseConfig[nodeEnv];
         return {
           dialect: dbConfig.dialect,
@@ -56,9 +56,9 @@ import { TasksModule } from './modules/tasks/tasks.module';
       inject: [ConfigService],
       useFactory: (config: ConfigService) => ({
         connection: {
-          host: config.get<string>('REDIS_HOST', 'localhost'),
-          port: parseInt(config.get<string>('REDIS_PORT', '6379'), 10),
-          password: config.get<string>('REDIS_PASSWORD', '') || '',
+          host: config.get<string>(EnvKey.REDIS_HOST, 'localhost'),
+          port: parseInt(config.get<string>(EnvKey.REDIS_PORT, '6379'), 10),
+          password: config.get<string>(EnvKey.REDIS_PASSWORD, '') || '',
           maxRetriesPerRequest: null,
         },
       }),

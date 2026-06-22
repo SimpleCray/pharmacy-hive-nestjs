@@ -1,5 +1,55 @@
 import * as Joi from 'joi';
 
+/**
+ * Central registry of environment variable names.
+ *
+ * Use these constants with `ConfigService.get(EnvKey.X)` and `process.env[EnvKey.X]`
+ * instead of raw strings so renames are caught by the compiler and there is a single
+ * source of truth for every key the app reads.
+ */
+export const EnvKey = {
+  NODE_ENV: 'NODE_ENV',
+  APP_NAME: 'APP_NAME',
+  APP_VERSION: 'APP_VERSION',
+  PORT: 'PORT',
+  APP_URL: 'APP_URL',
+  REQUEST_TIMEOUT_MS: 'REQUEST_TIMEOUT_MS',
+  ENABLE_QUEUE_BOARD: 'ENABLE_QUEUE_BOARD',
+
+  // Database
+  DB_USERNAME: 'DB_USERNAME',
+  DB_PASSWORD: 'DB_PASSWORD',
+  DB_NAME: 'DB_NAME',
+  DB_HOST: 'DB_HOST',
+  DB_PORT: 'DB_PORT',
+
+  // Redis
+  REDIS_HOST: 'REDIS_HOST',
+  REDIS_PORT: 'REDIS_PORT',
+  REDIS_PASSWORD: 'REDIS_PASSWORD',
+
+  // Monday.com
+  MONDAY_SIGNING_SECRET: 'MONDAY_SIGNING_SECRET',
+  MONDAY_CLIENT_ID: 'MONDAY_CLIENT_ID',
+  MONDAY_CLIENT_SECRET: 'MONDAY_CLIENT_SECRET',
+  MONDAY_REDIRECT_URL: 'MONDAY_REDIRECT_URL',
+
+  // Jotform
+  JOTFORM_API_KEY: 'JOTFORM_API_KEY',
+  JOTFORM_BASE_URL: 'JOTFORM_BASE_URL',
+
+  // Admin users
+  ADMIN_USERS: 'ADMIN_USERS',
+
+  // AppSignal
+  APPSIGNAL_PUSH_API_KEY: 'APPSIGNAL_PUSH_API_KEY',
+
+  // Security
+  APP_SECRET: 'APP_SECRET',
+} as const;
+
+export type EnvKey = (typeof EnvKey)[keyof typeof EnvKey];
+
 const port = Joi.number().integer().positive();
 
 /**
@@ -7,42 +57,42 @@ const port = Joi.number().integer().positive();
  * ConfigModule runs this at bootstrap and throws on the first failure set.
  */
 export const envValidationSchema = Joi.object({
-  NODE_ENV: Joi.string().valid('development', 'production', 'test', 'stage', 'staging', 'prod').default('development'),
-  APP_NAME: Joi.string().default('Pharmacy Hive'),
-  APP_VERSION: Joi.string().default('1.0.0'),
-  PORT: port.default(8080),
-  APP_URL: Joi.string().required(),
-  REQUEST_TIMEOUT_MS: port.default(30000),
-  ENABLE_QUEUE_BOARD: Joi.string().default('false'),
+  [EnvKey.NODE_ENV]: Joi.string().valid('development', 'production', 'test', 'stage', 'staging', 'prod').default('development'),
+  [EnvKey.APP_NAME]: Joi.string().default('Pharmacy Hive'),
+  [EnvKey.APP_VERSION]: Joi.string().default('1.0.0'),
+  [EnvKey.PORT]: port.default(8080),
+  [EnvKey.APP_URL]: Joi.string().required(),
+  [EnvKey.REQUEST_TIMEOUT_MS]: port.default(30000),
+  [EnvKey.ENABLE_QUEUE_BOARD]: Joi.string().default('false'),
 
   // Database
-  DB_USERNAME: Joi.string().required(),
-  DB_PASSWORD: Joi.string().required().allow(''),
-  DB_NAME: Joi.string().required(),
-  DB_HOST: Joi.string().required(),
-  DB_PORT: port.required(),
+  [EnvKey.DB_USERNAME]: Joi.string().required(),
+  [EnvKey.DB_PASSWORD]: Joi.string().required().allow(''),
+  [EnvKey.DB_NAME]: Joi.string().required(),
+  [EnvKey.DB_HOST]: Joi.string().required(),
+  [EnvKey.DB_PORT]: port.required(),
 
   // Redis
-  REDIS_HOST: Joi.string().default('localhost'),
-  REDIS_PORT: port.default(6379),
-  REDIS_PASSWORD: Joi.string().optional().allow(''),
+  [EnvKey.REDIS_HOST]: Joi.string().default('localhost'),
+  [EnvKey.REDIS_PORT]: port.default(6379),
+  [EnvKey.REDIS_PASSWORD]: Joi.string().optional().allow(''),
 
   // Monday.com
-  MONDAY_SIGNING_SECRET: Joi.string().required(),
-  MONDAY_CLIENT_ID: Joi.string().required(),
-  MONDAY_CLIENT_SECRET: Joi.string().required(),
-  MONDAY_REDIRECT_URL: Joi.string().required(),
+  [EnvKey.MONDAY_SIGNING_SECRET]: Joi.string().required(),
+  [EnvKey.MONDAY_CLIENT_ID]: Joi.string().required(),
+  [EnvKey.MONDAY_CLIENT_SECRET]: Joi.string().required(),
+  [EnvKey.MONDAY_REDIRECT_URL]: Joi.string().required(),
 
   // Jotform
-  JOTFORM_API_KEY: Joi.string().required(),
-  JOTFORM_BASE_URL: Joi.string().required(),
+  [EnvKey.JOTFORM_API_KEY]: Joi.string().required(),
+  [EnvKey.JOTFORM_BASE_URL]: Joi.string().required(),
 
   // Admin users
-  ADMIN_USERS: Joi.string().optional().allow(''),
+  [EnvKey.ADMIN_USERS]: Joi.string().optional().allow(''),
 
   // AppSignal
-  APPSIGNAL_PUSH_API_KEY: Joi.string().required().allow(''),
+  [EnvKey.APPSIGNAL_PUSH_API_KEY]: Joi.string().required().allow(''),
 
   // Security
-  APP_SECRET: Joi.string().required(),
+  [EnvKey.APP_SECRET]: Joi.string().required(),
 }).unknown(true);

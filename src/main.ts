@@ -14,6 +14,7 @@ import cookieParser from 'cookie-parser';
 import { Request, Response, NextFunction } from 'express';
 
 import { AppModule } from './app.module';
+import { EnvKey } from './config/env.validation';
 import { QUEUE_NAMES } from './common/constants/queue.constant';
 import createLogger, { resetLogger } from './common/logger/logger';
 import { extractErrorInfo } from './common/logger/logger.utils';
@@ -23,9 +24,9 @@ async function bootstrap() {
   // AppSignal must be instantiated before the app is created.
   new Appsignal({
     active: true,
-    name: process.env.APP_NAME || 'Pharmacy Hive',
-    pushApiKey: process.env.APPSIGNAL_PUSH_API_KEY || '',
-    environment: process.env.NODE_ENV || 'development',
+    name: process.env[EnvKey.APP_NAME] || 'Pharmacy Hive',
+    pushApiKey: process.env[EnvKey.APPSIGNAL_PUSH_API_KEY] || '',
+    environment: process.env[EnvKey.NODE_ENV] || 'development',
     enableNginxMetrics: true,
   });
 
@@ -39,13 +40,13 @@ async function bootstrap() {
   });
 
   const config = app.get(ConfigService);
-  const APP_NAME = config.get<string>('APP_NAME', 'Pharmacy Hive');
-  const APP_VERSION = config.get<string>('APP_VERSION', '1.0.0');
-  const NODE_ENV = config.get<string>('NODE_ENV', 'development');
-  const PORT = parseInt(config.get<string>('PORT', '8080'), 10);
-  const APP_SECRET = config.get<string>('APP_SECRET', '');
-  const ENABLE_QUEUE_BOARD = config.get<string>('ENABLE_QUEUE_BOARD', 'false');
-  const REQUEST_TIMEOUT_MS = parseInt(config.get<string>('REQUEST_TIMEOUT_MS', '30000'), 10);
+  const APP_NAME = config.get<string>(EnvKey.APP_NAME, 'Pharmacy Hive');
+  const APP_VERSION = config.get<string>(EnvKey.APP_VERSION, '1.0.0');
+  const NODE_ENV = config.get<string>(EnvKey.NODE_ENV, 'development');
+  const PORT = parseInt(config.get<string>(EnvKey.PORT, '8080'), 10);
+  const APP_SECRET = config.get<string>(EnvKey.APP_SECRET, '');
+  const ENABLE_QUEUE_BOARD = config.get<string>(EnvKey.ENABLE_QUEUE_BOARD, 'false');
+  const REQUEST_TIMEOUT_MS = parseInt(config.get<string>(EnvKey.REQUEST_TIMEOUT_MS, '30000'), 10);
 
   logger.info(`🎉 Successfully deploy app version ${APP_VERSION}`);
 

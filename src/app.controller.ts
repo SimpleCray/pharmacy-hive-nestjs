@@ -6,6 +6,7 @@ import { Response } from 'express';
 import IORedis from 'ioredis';
 import createLogger from './common/logger/logger';
 import { extractErrorInfo } from './common/logger/logger.utils';
+import { EnvKey } from './config/env.validation';
 
 const logger = createLogger();
 
@@ -18,8 +19,8 @@ export class AppController {
 
   @Get()
   home(@Res() res: Response) {
-    const appName = this.configService.get<string>('APP_NAME', 'Pharmacy Hive');
-    const appVersion = this.configService.get<string>('APP_VERSION', '1.0.0');
+    const appName = this.configService.get<string>(EnvKey.APP_NAME, 'Pharmacy Hive');
+    const appVersion = this.configService.get<string>(EnvKey.APP_VERSION, '1.0.0');
     res.status(200).send({ message: `You have reached the home page of ${appName} ${appVersion}` });
   }
 
@@ -29,8 +30,8 @@ export class AppController {
       status: 'healthy',
       timestamp: new Date().toISOString(),
       uptime: process.uptime(),
-      environment: this.configService.get<string>('NODE_ENV', 'development'),
-      version: this.configService.get<string>('APP_VERSION', '1.0.0'),
+      environment: this.configService.get<string>(EnvKey.NODE_ENV, 'development'),
+      version: this.configService.get<string>(EnvKey.APP_VERSION, '1.0.0'),
       services: {
         database: 'unknown',
         redis: 'unknown',
@@ -48,9 +49,9 @@ export class AppController {
 
     try {
       const redis = new IORedis({
-        host: this.configService.get<string>('REDIS_HOST', 'localhost'),
-        port: parseInt(this.configService.get<string>('REDIS_PORT', '6379'), 10),
-        password: this.configService.get<string>('REDIS_PASSWORD', '') || '',
+        host: this.configService.get<string>(EnvKey.REDIS_HOST, 'localhost'),
+        port: parseInt(this.configService.get<string>(EnvKey.REDIS_PORT, '6379'), 10),
+        password: this.configService.get<string>(EnvKey.REDIS_PASSWORD, '') || '',
         maxRetriesPerRequest: 1,
         connectTimeout: 2000,
       });

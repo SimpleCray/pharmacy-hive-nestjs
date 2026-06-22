@@ -9,6 +9,7 @@ import { JotFormService } from '../jotform/jotform.service';
 import { SubscriptionEnum } from '../../common/interfaces/subscription.interface';
 import { MondaySubscribeRequestBody, MondayUnsubscribeRequestBody } from '../../common/interfaces/fields.interface';
 import { MondayAuthGuard } from '../../common/guards/monday-auth.guard';
+import { EnvKey } from '../../config/env.validation';
 
 const logger = createLogger();
 
@@ -57,8 +58,8 @@ export class SubscriptionsController {
           return;
         }
 
-        const appUrl = this.configService.get<string>('APP_URL', '');
-        const appSecret = this.configService.get<string>('APP_SECRET', '');
+        const appUrl = this.configService.get<string>(EnvKey.APP_URL, '');
+        const appSecret = this.configService.get<string>(EnvKey.APP_SECRET, '');
         const jotformWebhookUrl = webhookUrlWithSecret(appUrl, appSecret);
         try {
           await this.jotFormService.addWebhook(formId, jotformWebhookUrl);
@@ -116,8 +117,8 @@ export class SubscriptionsController {
           const formSubscriptionCount = await this.subscriptionService.countSubscriptions(formId);
           /** If there is only one subscription for this form, delete the Jotform webhook */
           if (formSubscriptionCount === 1) {
-            const appUrl = this.configService.get<string>('APP_URL', '');
-            const appSecret = this.configService.get<string>('APP_SECRET', '');
+            const appUrl = this.configService.get<string>(EnvKey.APP_URL, '');
+            const appSecret = this.configService.get<string>(EnvKey.APP_SECRET, '');
             const jotformWebhookUrl = webhookUrlWithSecret(appUrl, appSecret);
             await this.jotFormService.deleteWebhookByUrl(formId, jotformWebhookUrl);
           } else {
