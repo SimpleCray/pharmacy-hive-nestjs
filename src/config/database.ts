@@ -14,7 +14,7 @@ export interface DatabaseConfigEntry {
 export type DatabaseConfigByEnv = Record<string, DatabaseConfigEntry>;
 
 // database.config.js is shared with sequelize-cli (.sequelizerc).
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+
 const rawDatabaseConfig = require('./database.config');
 
 const databaseConfig = rawDatabaseConfig as DatabaseConfigByEnv;

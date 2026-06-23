@@ -21,17 +21,16 @@ import { extractErrorInfo } from './common/logger/logger.utils';
 import { WinstonLoggerService } from './common/logger/winston-logger.service';
 
 async function bootstrap() {
-
   if (process.env.NODE_ENV !== 'development') {
-  // AppSignal must be instantiated before the app is created.
-  new Appsignal({
-    active: true,
-    name: process.env[EnvKey.APP_NAME] || 'Pharmacy Hive',
-    pushApiKey: process.env[EnvKey.APPSIGNAL_PUSH_API_KEY] || '',
-    environment: process.env[EnvKey.NODE_ENV] || 'development',
-    enableNginxMetrics: true,
-  });
-}
+    // AppSignal must be instantiated before the app is created.
+    new Appsignal({
+      active: true,
+      name: process.env[EnvKey.APP_NAME] || 'Pharmacy Hive',
+      pushApiKey: process.env[EnvKey.APPSIGNAL_PUSH_API_KEY] || '',
+      environment: process.env[EnvKey.NODE_ENV] || 'development',
+      enableNginxMetrics: true,
+    });
+  }
 
   resetLogger();
   const logger = createLogger();

@@ -61,12 +61,7 @@ export class AuthController {
     logger.info('auth-controller.authoriseMonday - Redirect to monday.com Oauth', { account_id: accountId, user_id: userId });
     const state = randomstring.generate();
     const oauthUrl = `https://auth.monday.com/oauth2/authorize?client_id=${clientId}&state=${state}&redirect_uri=${redirectUrl}`;
-    res
-      .cookie('state', state)
-      .cookie('userId', userId)
-      .cookie('accountId', accountId)
-      .cookie('backToUrl', backToUrl)
-      .redirect(oauthUrl);
+    res.cookie('state', state).cookie('userId', userId).cookie('accountId', accountId).cookie('backToUrl', backToUrl).redirect(oauthUrl);
   }
 
   @Get('callback')

@@ -54,10 +54,9 @@ export class FormService {
 
   handleFormSubmissionWebhook = async ({ submissionId, formId, formData }: HandleFormSubmissionWebhookParams) => {
     try {
-      logger.info(
-        `form-service.handleFormSubmissionWebhook - Handling form submission webhook. submissionID: ${submissionId}, formID: ${formId}`,
-        { formData },
-      );
+      logger.info(`form-service.handleFormSubmissionWebhook - Handling form submission webhook. submissionID: ${submissionId}, formID: ${formId}`, {
+        formData,
+      });
       const subscriptions = await this.subscriptionService.getSubscriptions({
         webhook_type: SubscriptionEnum.FORM_SUBMISSION,
         form_id: formId,
