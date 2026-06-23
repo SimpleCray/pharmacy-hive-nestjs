@@ -5,7 +5,7 @@ import { BullModule } from '@nestjs/bullmq';
 import { ScheduleModule } from '@nestjs/schedule';
 
 import { envValidationSchema, EnvKey } from './config/env.validation';
-import databaseConfig from './config/database.config';
+import databaseConfig from './config/database';
 import { AppController } from './app.controller';
 
 import User from './models/user.model';

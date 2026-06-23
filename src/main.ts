@@ -21,6 +21,8 @@ import { extractErrorInfo } from './common/logger/logger.utils';
 import { WinstonLoggerService } from './common/logger/winston-logger.service';
 
 async function bootstrap() {
+
+  if (process.env.NODE_ENV !== 'development') {
   // AppSignal must be instantiated before the app is created.
   new Appsignal({
     active: true,
@@ -29,6 +31,7 @@ async function bootstrap() {
     environment: process.env[EnvKey.NODE_ENV] || 'development',
     enableNginxMetrics: true,
   });
+}
 
   resetLogger();
   const logger = createLogger();

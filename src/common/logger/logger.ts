@@ -75,7 +75,7 @@ const createLogger = (): winston.Logger => {
               console.warn(`⚠️ ${message}`, ...(splatData as unknown[]));
               break;
             case 'info':
-              console.info(`ℹ️ ${message}`, ...(splatData as unknown[]));
+              console.info(`ℹ️  - ${message}`, ...(splatData as unknown[]));
               break;
             case 'debug':
               console.debug(`🐛 ${message}`, ...(splatData as unknown[]));
