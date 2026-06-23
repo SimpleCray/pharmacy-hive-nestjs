@@ -23,7 +23,34 @@ request returns immediately while the heavy work (Monday API calls, file uploads
 
 ---
 
-## 2. Environment setup
+## 2. How the queue boots (init order)
+
+There is **no manual "start queue" call**. Everything is wired by NestJS dependency
+injection at app startup. The chain, first file to last:
+
+| # | File | What happens |
+|---|---|---|
+| 1 | `src/main.ts` | `NestFactory.create(AppModule)` — entry point. Triggers module init. |
+| 2 | `src/app.module.ts` → `BullModule.forRootAsync` | **Real init.** Opens the shared Redis connection (`REDIS_HOST/PORT/PASSWORD`). The root all queues share. |
+| 3 | `src/modules/queue/queue.module.ts` → `BullModule.registerQueue({ name: 'sync-data' })` | Creates the `sync-data` **Queue** object (producer side) + default job options. Provides `QueueService`. |
+| 4 | `src/modules/form/form.module.ts` → `providers: [SyncProcessor]` | Registering `SyncProcessor` (`@Processor('sync-data')`) makes BullMQ spin up the **Worker** that pulls jobs (consumer side, concurrency 5). |
+| 5 | `src/main.ts` (again) | `app.get(getQueueToken('sync-data'))` grabs the Queue for the Bull Board UI. |
+
+```mermaid
+flowchart TD
+    M["1. main.ts<br/>NestFactory.create(AppModule)"] --> R["2. app.module.ts<br/>BullModule.forRootAsync<br/>(Redis connection)"]
+    R --> Q["3. queue.module.ts<br/>registerQueue('sync-data')<br/>→ Queue + QueueService"]
+    R --> W["4. form.module.ts<br/>SyncProcessor (@Processor)<br/>→ Worker (concurrency 5)"]
+    Q --> BB["5. main.ts<br/>getQueueToken → Bull Board"]
+```
+
+- **First file:** `main.ts`.
+- **Where the queue actually comes alive:** `app.module.ts` (Redis) → `queue.module.ts` (queue) → `form.module.ts` (worker).
+- Producer (Queue) and consumer (Worker) run in the **same process** — no separate worker.
+
+---
+
+## 3. Environment setup
 
 ### 2.1 Required env vars
 
@@ -70,7 +97,7 @@ worker process**. Producer and consumer live in the same process.
 
 ---
 
-## 3. Architecture
+## 4. Architecture
 
 ```mermaid
 flowchart LR
@@ -104,7 +131,7 @@ the `sync-data` queue in Redis. The queue decouples the fast HTTP path from the 
 
 ---
 
-## 4. End-to-end data flow (Jotform → Monday sync)
+## 5. End-to-end data flow (Jotform → Monday sync)
 
 ```mermaid
 sequenceDiagram
@@ -139,7 +166,7 @@ sequenceDiagram
 
 ---
 
-## 5. Job lifecycle & retry behaviour
+## 6. Job lifecycle & retry behaviour
 
 Default job options are set once in `queue.module.ts`:
 
@@ -174,7 +201,7 @@ Worker events are logged in `sync.processor.ts` via `@OnWorkerEvent`: `completed
 
 ---
 
-## 6. Job types
+## 7. Job types
 
 Defined in `src/common/constants/queue.constant.ts`. The worker routes on `job.data.type`:
 
@@ -186,7 +213,7 @@ Defined in `src/common/constants/queue.constant.ts`. The worker routes on `job.d
 
 ---
 
-## 7. Producing a job
+## 8. Producing a job
 
 ```ts
 // inject QueueService, then:
@@ -209,7 +236,7 @@ await this.queueService.addSyncJob(
 
 ---
 
-## 8. Monitoring
+## 9. Monitoring
 
 ### 8.1 Bull Board UI
 
@@ -233,7 +260,7 @@ GET /api/queue/jobs/:jobId
 
 ---
 
-## 9. Scheduled tasks
+## 10. Scheduled tasks
 
 `src/modules/tasks/tasks.service.ts` runs `syncData()` daily at midnight via `@Cron`
 (`@nestjs/schedule`). `syncData()` is currently a no-op placeholder migrated from the Express
@@ -241,7 +268,7 @@ app — fill it in if a periodic full sync is needed.
 
 ---
 
-## 10. Troubleshooting
+## 11. Troubleshooting
 
 | Symptom | Likely cause | Fix |
 |---|---|---|
